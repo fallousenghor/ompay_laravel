@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t fallousenghor/backendom-app:latest .
+        run: docker build -t fallousenghor/laravel-backend:latest .
 
       - name: Push Docker image
-        run: docker push fallousenghor/backendom-app:latest
+        run: docker push fallousenghor/laravel-backend:latest
