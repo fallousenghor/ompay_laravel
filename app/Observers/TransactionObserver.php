@@ -16,7 +16,7 @@ class TransactionObserver
 
     public function creating(Transaction $transaction)
     {
-        if (app()->environment('production') && 
+        if (app()->environment('production') &&
             !$this->transactionService->verifierSoldeDisponible($transaction)) {
             throw new \Exception('Solde insuffisant');
         }

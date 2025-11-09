@@ -21,7 +21,7 @@ class TransactionSeeder extends Seeder
         foreach(range(1, 25) as $i) {
             $compteSource = $comptes->random();
             $soldeDisponible = $compteSource->compteOm->solde_om;
-            
+
             $transaction = Transaction::create([
                 'id' => Str::uuid(),
                 'compte_source_id' => $compteSource->id,
